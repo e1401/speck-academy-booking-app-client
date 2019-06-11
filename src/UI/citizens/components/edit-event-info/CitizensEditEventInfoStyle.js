@@ -12,6 +12,7 @@ const MainContainer = styled.div`
 `;
 
 const MainHeader = styled.h1`
+  line-height: normal;
   margin-top: 32px;
   margin-bottom: 16px;
   font-family: Lora;
@@ -20,6 +21,7 @@ const MainHeader = styled.h1`
 `;
 
 const MainDescription = styled.p`
+  line-height: normal;
   font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   color: #000000;
@@ -29,6 +31,7 @@ const MainDescription = styled.p`
 const FormContainer = styled.form``;
 
 const FormHeader = styled.h5`
+  line-height: normal;
   text-transform: uppercase;
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
@@ -53,6 +56,9 @@ const FormInput = styled.input`
   margin-bottom: 8px;
   padding-left: 8px;
   padding-right: 8px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 14px;
+  opacity: 0.5;
 `;
 
 const FormInputText = styled.textarea`
@@ -71,6 +77,7 @@ const FormInputText = styled.textarea`
   border: solid 1px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
   resize: none;
+  opacity: 0.5;
 `;
 
 const FormInputTextCharacterCounter = styled.p`
