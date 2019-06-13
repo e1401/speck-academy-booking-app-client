@@ -6,9 +6,7 @@ import {
   CitizensSelectHall,
   CitizensSelectDateTime,
   CitizensEditEventInfo,
-  CitizensSubmitRequest,
-  Successfull,
-  Unsuccessfull
+  CitizensSubmitRequest
 } from '../';
 
 import Error404 from '../../common/error404/Error404';
@@ -25,8 +23,7 @@ const CitizensPage = () => (
 
     <CitizensAdminLogin />
     <Error404 />
-    <Successfull />
-    <Unsuccessfull />
+
     <Footer />
   </React.Fragment>
 );
