@@ -4,19 +4,32 @@ import {
   Container,
   Button,
   ButtonText,
-  StyledLink
-} from './SuccessUnsuccessStyle';
-
+  StyledLink,
+  Title,
+  Description,
+  CheckImage,
+  SecContainer,
+  ThContainer,
+  ButtonContainer
+} from './SuccsessUnsuccessStyle';
+import okImage from '../../../../images/Group 6@2x.png';
 const Successfull = () => (
   <Container>
-    <Title>Potvrda</Title>
-    <Description>Vaš zahtijev za rezervaciju je poslan.</Description>
+    <SecContainer>
+      <CheckImage imgSrc={okImage} />
+    </SecContainer>
+    <ThContainer>
+      <Title>Potvrda</Title>
+      <Description>Vaš zahtijev za rezervaciju je poslan.</Description>
+    </ThContainer>
 
-    <StyledLink to="">
-      <Button>
-        <ButtonText>U REDU</ButtonText>
-      </Button>
-    </StyledLink>
+    <ButtonContainer>
+      <StyledLink to="">
+        <Button>
+          <ButtonText>U REDU</ButtonText>
+        </Button>
+      </StyledLink>
+    </ButtonContainer>
   </Container>
 );
 
