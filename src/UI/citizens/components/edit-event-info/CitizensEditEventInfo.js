@@ -27,6 +27,7 @@ class CitizensEditEventInfo extends React.Component {
     const charLength = +charCount;
     this.setState({ charCounter: charLength });
   };
+
   render() {
     return (
       <MainContainer>
