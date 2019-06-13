@@ -1,6 +1,37 @@
-/*import React from 'react';
+import React from 'react';
 
-const Unsuccessfull = () => <Container />;
+import {
+  Container,
+  Button,
+  ButtonText,
+  StyledLink,
+  Title,
+  Description,
+  CheckImage2,
+  SecContainer,
+  ThContainer,
+  ButtonContainer
+} from './SuccsessUnsuccessStyle';
+
+import okImage2 from '../../../../images/Component 2 – 1@2x.png';
+const Unsuccessfull = () => (
+  <Container>
+    <SecContainer>
+      <CheckImage2 imgSrc={okImage2} />
+    </SecContainer>
+    <ThContainer>
+      <Title>Greška</Title>
+      <Description>Molimo da pokušate ponovo.</Description>
+    </ThContainer>
+
+    <ButtonContainer>
+      <StyledLink to="">
+        <Button>
+          <ButtonText>U REDU</ButtonText>
+        </Button>
+      </StyledLink>
+    </ButtonContainer>
+  </Container>
+);
 
 export default Unsuccessfull;
-*/

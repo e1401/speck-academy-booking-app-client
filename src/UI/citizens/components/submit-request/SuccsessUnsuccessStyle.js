@@ -100,6 +100,18 @@ export const CheckImage = styled.div`
   margin-top: 24px;
   margin-right: 33px;
 `;
+export const CheckImage2 = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 83.3px;
+  height: 83.7px;
+  object-fit: contain;
+  background-image: url(${props => props.imgSrc});
+  background-size: cover;
+  margin-top: 24px;
+  margin-right: 33px;
+`;
 
 export const SecContainer = styled.div`
   display: flex;

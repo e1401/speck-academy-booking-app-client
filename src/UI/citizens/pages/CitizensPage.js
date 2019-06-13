@@ -26,7 +26,7 @@ const CitizensPage = () => (
     <CitizensAdminLogin />
     <Error404 />
     <Successfull />
-
+    <Unsuccessfull />
     <Footer />
   </React.Fragment>
 );
