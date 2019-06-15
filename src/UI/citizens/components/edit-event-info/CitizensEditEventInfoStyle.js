@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
-  margin-top: 32px;
-  ${'' /* margin: auto; */}
+  margin: auto;
   width: 1024px;
   border-radius: 4px;
   border: solid 1px #d9d9d9;
@@ -13,6 +12,7 @@ const MainContainer = styled.div`
 `;
 
 const MainHeader = styled.h1`
+  line-height: normal;
   margin-top: 32px;
   margin-bottom: 16px;
   font-family: Lora;
@@ -21,6 +21,7 @@ const MainHeader = styled.h1`
 `;
 
 const MainDescription = styled.p`
+  line-height: normal;
   font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   color: #000000;
@@ -30,6 +31,7 @@ const MainDescription = styled.p`
 const FormContainer = styled.form``;
 
 const FormHeader = styled.h5`
+  line-height: normal;
   text-transform: uppercase;
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
@@ -54,11 +56,21 @@ const FormInput = styled.input`
   margin-bottom: 8px;
   padding-left: 8px;
   padding-right: 8px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 14px;
+  opacity: 0.5;
+  :required:focus {
+    box-shadow: 0 0 3px rgba(255, 0, 0, 0.5);
+  }
+  :invalid {
+    box-shadow: 0 0 2px 1px red;
+  }
 `;
 
 const FormInputText = styled.textarea`
   width: 100%;
   height: 136px;
+  line-height: normal;
   font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -72,6 +84,13 @@ const FormInputText = styled.textarea`
   border: solid 1px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
   resize: none;
+  opacity: 0.5;
+  :required:focus {
+    box-shadow: 0 0 3px rgba(255, 0, 0, 0.5);
+  }
+  :invalid {
+    box-shadow: 0 0 2px 1px red;
+  }
 `;
 
 const FormInputTextCharacterCounter = styled.p`
@@ -101,7 +120,7 @@ const FormInlineInput = styled.span`
 const CricleMark = styled.div`
   width: 152px;
   height: 152px;
-  opacity: 0.4;
+  opacity: 0.2;
   border: solid 16px rgba(130, 212, 167, 0.4);
   border-radius: 50%;
   position: absolute;
@@ -115,7 +134,7 @@ const NumberMark = styled.div`
   font-size: 96px;
   font-weight: 800;
   text-align: center;
-  margin-left: 35px;
+  margin-left: 38px;
   color: #82d4a7;
 `;
 
