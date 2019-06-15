@@ -112,6 +112,10 @@ export const DateInput = styled.div`
     :not(:focus):invalid {
       color: transparent;
     }
+    ::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      display: none;
+    }
   }
 `;
 
