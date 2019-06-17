@@ -10,6 +10,7 @@ import {
   LabelContainer,
   DateInput,
   TimeInput,
+  TimePickerCustom,
   InputsContainer,
   Vector,
   Timeline,
@@ -160,21 +161,21 @@ function drawFromDataBase(reservation) {
 */
 
 const CitizensSelectDateTime = props => {
-  const { 
+  const {
     hallId,
-    reservationDate, 
-    reservationStartTime, 
+    reservationDate,
+    reservationStartTime,
     reservationEndTime,
-    reservations, 
-    handleFilterChange 
+    reservations,
+    handleFilterChange
   } = props;
   const filteredReservations = [];
-  
+
   // Filter reservations by selected date
   for (const reservation of reservations) {
     const selectedDate = new Date(reservationDate).toDateString();
     const reservedDate = new Date(reservation.reservationDate).toDateString();
-    
+
     console.log('date1', selectedDate);
     console.log('date1', reservedDate);
 
@@ -193,24 +194,20 @@ const CitizensSelectDateTime = props => {
     const startMinute = parseInt(startTime[1], 10);
     const endHour = parseInt(endTime[0], 10);
     const endMinute = parseInt(endTime[1], 10);
-    
-    const begin =
-      25 +
-      (startHour - 8) * 50 +
-      (startMinute / 15) * 12.5;
-    const end =
-      25 +
-      (endHour - 8) * 50 +
-      (endMinute / 15) * 12.5;
-    
+
+    const begin = 25 + (startHour - 8) * 50 + (startMinute / 15) * 12.5;
+    const end = 25 + (endHour - 8) * 50 + (endMinute / 15) * 12.5;
+
     const width = end - begin;
-    
-    return <DrawFromDB left={begin + 'px'} wdh={width + 'px'} background="#93e9bb" />;
-  }
+
+    return (
+      <DrawFromDB left={begin + 'px'} wdh={width + 'px'} background="#93e9bb" />
+    );
+  };
 
   const drawFromDB = () => {
     const divs = [];
-    
+
     for (const reservation of filteredReservations) {
       const startTime = reservation.reservationStartTime.split(':');
       const endTime = reservation.reservationEndTime.split(':');
@@ -231,10 +228,10 @@ const CitizensSelectDateTime = props => {
         />
       );
     }
-    
+
     return divs;
-  }
-  
+  };
+
   return (
     <HeadContainer>
       <Circle>
@@ -254,40 +251,32 @@ const CitizensSelectDateTime = props => {
         </LabelContainer>
         <InputsContainer>
           <DateInput>
-            <input 
+            <input
               type="date"
               name="reservationDate"
-              onChange={handleFilterChange} 
+              onChange={handleFilterChange}
             />
             <span />
             <Vector />
           </DateInput>
-          <TimeInput>
-            <input 
-              type="time"
-              name="reservationStartTime"
-              onChange={handleFilterChange} 
-              min="08:00"
-              max="22:00"
-              step="900"
-              required
-            />
-            <span />
-            <Vector />
-          </TimeInput>
-          <TimeInput>
-            <input
-              type="time"
-              name="reservationEndTime"
-              onChange={handleFilterChange} 
-              min="08:00"
-              max="22:00"
-              step="900"
-              required
-            />
-            <span />
-            <Vector />
-          </TimeInput>
+          <TimePickerCustom
+            type="time"
+            name="reservationStartTime"
+            onChange={handleFilterChange}
+            showSecond={false}
+            minuteStep={15}
+            disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
+            placeholder="VRIJEME..."
+          />
+          <TimePickerCustom
+            type="time"
+            name="reservationEndTime"
+            onChange={handleFilterChange}
+            showSecond={false}
+            minuteStep={15}
+            disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
+            placeholder="VRIJEME..."
+          />
         </InputsContainer>
         <Timeline>
           {displayTime()}
