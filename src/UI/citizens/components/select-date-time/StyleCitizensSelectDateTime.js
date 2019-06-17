@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import TimePicker from 'rc-time-picker';
+import 'rc-time-picker/assets/index.css';
 
 export const HeadContainer = styled.div`
   width: 1024px;
@@ -115,12 +117,23 @@ export const DateInput = styled.div`
   }
 `;
 
-export const TimeInput = styled(DateInput)`
-  input {
-    :invalid + span:after {
-      margin-left: 8px;
-      content: 'VRIJEME...';
-    }
+export const TimePickerCustom = styled(TimePicker)`
+  border-radius: 2px;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 15px;
+  line-height: 32px;
+  position: relative;
+  .rc-time-picker-input {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 2px;
+    border: solid 0px rgba(0, 0, 0, 0);
+    width: 244px;
   }
 `;
 
