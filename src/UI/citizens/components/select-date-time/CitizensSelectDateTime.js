@@ -251,6 +251,7 @@ const CitizensSelectDateTime = props => {
           <Label>KRAJ</Label>
         </LabelContainer>
         <InputsContainer>
+
           <DayPickerInput
             type="date"
             name="reservationDate"
@@ -259,6 +260,7 @@ const CitizensSelectDateTime = props => {
             required
           />
           <TimePicker
+
             type="time"
             name="reservationStartTime"
             onChange={handleFilterChange}
@@ -266,17 +268,21 @@ const CitizensSelectDateTime = props => {
             minuteStep={15}
             disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
             placeholder="VRIJEME..."
+
             required
           />
           <TimePicker
             type="time"
             name="reservationStartTime"
+
             onChange={handleFilterChange}
             showSecond={false}
             minuteStep={15}
             disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
             placeholder="VRIJEME..."
+
             required
+
           />
         </InputsContainer>
         <Timeline>

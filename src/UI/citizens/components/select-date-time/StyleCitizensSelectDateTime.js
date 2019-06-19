@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import TimePicker from 'rc-time-picker';
+import 'rc-time-picker/assets/index.css';
 
 export const HeadContainer = styled.div`
   width: 1024px;
@@ -110,6 +112,7 @@ export const InputsContainer = styled(LabelContainer)`
     }
   }
 
+
   .DayPickerInput {
     border-radius: 2px;
     border: solid 1px rgba(0, 0, 0, 0.15);
@@ -131,6 +134,7 @@ export const InputsContainer = styled(LabelContainer)`
       color: #666;
       background-color: #fff;
     }
+
   }
 `;
 
