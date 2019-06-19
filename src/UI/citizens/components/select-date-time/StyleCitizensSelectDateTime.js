@@ -86,59 +86,56 @@ export const LabelContainer = styled.div`
   margin-top: 8px;
 `;
 
-export const DateInput = styled.div`
-  border-radius: 2px;
-  border: solid 1px rgba(0, 0, 0, 0.15);
-  font-family: Poppins, sans-serif;
-  opacity: 0.3;
-  font-size: 14px;
-  font-weight: 500;
-  display: inline-block;
-  margin-right: 15px;
-  line-height: 32px;
-  position: relative;
-  input {
-    border-radius: 2px;
-    border: solid 0px rgba(0, 0, 0, 0);
-    width: 244px;
-    :invalid + span:after {
-      margin-left: 8px;
-      content: 'DATUM...';
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    :focus:invalid + span:after {
-      display: none;
-    }
-    :not(:focus):invalid {
-      color: transparent;
-    }
-  }
-`;
+export const InputsContainer = styled(LabelContainer)`
+  margin-left: 0px;
 
-export const TimePickerCustom = styled(TimePicker)`
-  border-radius: 2px;
-  border: solid 1px rgba(0, 0, 0, 0.15);
-  font-family: Poppins, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  display: inline-block;
-  margin-right: 15px;
-  line-height: 32px;
-  position: relative;
-  .rc-time-picker-input {
+  & rc-time-picker-panel-input,
+  & .rc-time-picker {
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
     font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    border-radius: 2px;
-    border: solid 0px rgba(0, 0, 0, 0);
-    width: 244px;
+    display: inline-block;
+    margin-right: 15px;
+    line-height: 32px;
+    position: relative;
+    input {
+      border-radius: 2px;
+      border: solid 0px rgba(0, 0, 0, 0);
+      :invalid + span:after {
+        margin-left: 8px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
   }
-`;
 
-export const InputsContainer = styled(LabelContainer)`
-  margin-left: 0px;
+
+  .DayPickerInput {
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    font-size: 12px;
+    font-family: Poppins, sans-serif;
+    input {
+      border: solid 0px rgba(0, 0, 0, 0);
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      padding-top: 4px;
+      padding-left: 7px;
+      height: 28px;
+      cursor: text;
+      line-height: 1.5;
+      color: #666;
+      background-color: #fff;
+    }
+
+  }
 `;
 
 export const Vector = styled.div`

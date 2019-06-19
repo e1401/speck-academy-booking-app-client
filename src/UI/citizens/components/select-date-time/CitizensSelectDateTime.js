@@ -1,4 +1,8 @@
 import React from 'react';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
+import TimePicker from 'rc-time-picker';
+import 'rc-time-picker/assets/index.css';
 import {
   HeadContainer,
   Circle,
@@ -8,9 +12,6 @@ import {
   Hlabel,
   Label,
   LabelContainer,
-  DateInput,
-  TimeInput,
-  TimePickerCustom,
   InputsContainer,
   Vector,
   Timeline,
@@ -250,16 +251,16 @@ const CitizensSelectDateTime = props => {
           <Label>KRAJ</Label>
         </LabelContainer>
         <InputsContainer>
-          <DateInput>
-            <input
-              type="date"
-              name="reservationDate"
-              onChange={handleFilterChange}
-            />
-            <span />
-            <Vector />
-          </DateInput>
-          <TimePickerCustom
+
+          <DayPickerInput
+            type="date"
+            name="reservationDate"
+            onChange={handleFilterChange}
+            placeholder="DATUM..."
+            required
+          />
+          <TimePicker
+
             type="time"
             name="reservationStartTime"
             onChange={handleFilterChange}
@@ -267,15 +268,21 @@ const CitizensSelectDateTime = props => {
             minuteStep={15}
             disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
             placeholder="VRIJEME..."
+
+            required
           />
-          <TimePickerCustom
+          <TimePicker
             type="time"
-            name="reservationEndTime"
+            name="reservationStartTime"
+
             onChange={handleFilterChange}
             showSecond={false}
             minuteStep={15}
             disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
             placeholder="VRIJEME..."
+
+            required
+
           />
         </InputsContainer>
         <Timeline>
