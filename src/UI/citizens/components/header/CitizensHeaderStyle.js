@@ -40,7 +40,7 @@ const HeaderContainer = styled.header`
   position: relative;
   width: 1440px;
   color: #fff;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 `;
 
