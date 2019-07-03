@@ -155,7 +155,7 @@ const CitizensSelectDateTime = props => {
               formatDate={formatDate}
               parseDate={parseDate}
               format="l"
-              placeholder={`ODABERITE DATUM...`}
+              placeholder={`DATUM...`}
               dayPickerProps={{
                 locale: 'hr',
                 localeUtils: MomentLocaleUtils
@@ -169,6 +169,9 @@ const CitizensSelectDateTime = props => {
               onChange={handleReservationTimeChange('reservationStartTime')}
               format={'HH:mm'}
               className="xxx"
+              minuteStep={15}
+              disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
+              placeholder={`VRIJEME...`}
             />
             <span />
             <Vector />
@@ -179,6 +182,9 @@ const CitizensSelectDateTime = props => {
               onChange={handleReservationTimeChange('reservationEndTime')}
               format={'HH:mm'}
               className="xxx"
+              minuteStep={15}
+              disabledHours={() => [0, 1, 2, 3, 4, 5, 6, 7, 23]}
+              placeholder={`VRIJEME...`}
             />
             <span />
             <Vector />
