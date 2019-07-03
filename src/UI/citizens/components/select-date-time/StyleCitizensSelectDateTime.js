@@ -118,7 +118,6 @@ export const TimeInput = styled(DateInput)`
   input {
     :invalid + span:after {
       margin-left: 8px;
-      content: 'VRIJEME...';
     }
   }
 `;
